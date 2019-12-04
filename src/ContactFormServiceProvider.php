@@ -14,7 +14,7 @@ class ContactFormServiceProvider extends ServiceProvider
     public function boot()
     {
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'hosomikai');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'hosomikai');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'contact-form');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
@@ -62,9 +62,9 @@ class ContactFormServiceProvider extends ServiceProvider
         ], 'laravel-contact-form.config');
 
         // Publishing the views.
-        /*$this->publishes([
+        $this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/vendor/hosomikai'),
-        ], 'laravel-contact-form.views');*/
+        ], 'laravel-contact-form.views');
 
         // Publishing assets.
         /*$this->publishes([
