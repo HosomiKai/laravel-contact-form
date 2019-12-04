@@ -15,4 +15,35 @@ class ContactForm extends Facade
     {
         return 'contact-form';
     }
+
+    /**
+     * route for php website.
+     *
+     * @param array $options
+     * @return void
+     */
+    public static function routes(array $options = [])
+    {
+        require __DIR__ . '/../../routes/contact.php';
+    }
+
+    /**
+     * route for api request.
+     *
+     * @return void
+     */
+    public static function apiRoutes()
+    {
+        require __DIR__ . '/../../routes/contact-api.php';
+    }
+
+    /**
+     * route for email preview.
+     *
+     * @return void
+     */
+    public static function previewRoutes()
+    {
+        require __DIR__ . '/../../routes/contact-mail-preview.php';
+    }
 }
