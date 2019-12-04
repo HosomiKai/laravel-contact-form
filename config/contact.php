@@ -13,4 +13,25 @@ return [
     */
 
     'email' => env('CONTACT_MAIL', 'john.doe@example.com'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Route
+    |--------------------------------------------------------------------------
+    |
+    | route setting
+    |
+    */
+
+    'routes' => [
+        'web' => [
+            'preview' => 'contact_form_mail_preview',
+            'index' => 'contact',
+            'store' => 'contact',
+        ],
+
+        'api' => [
+            'store' => 'contact',
+        ],
+    ],
 ];
